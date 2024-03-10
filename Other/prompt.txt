@@ -1,0 +1,39 @@
+prompt if needed:
+1.
+Help me write a python code.
+
+I have a file address: data_path=""
+it store the all images that used
+
+
+2. Tabular
+I have two csv file training_dir, validate_dir:
+one file contains information for training, one file contains information for validating.
+
+All csv file are same, the first row is header, there are many columns, includes:
+teacherID	gaze0	gaze1	gaze2	distance0	distance1	distance2	relaxation0	relaxation1	relaxation2	gesture0	gesture1	gesture2	imgID	posX	posY	gaze	distance	relaxation	gesture	noseX	noseY	noseZ	left_eyeX	left_eyeY	left_eyeZ	right_eyeX	right_eyeY	right_eyeZ	left_earX	left_earY	left_earZ	right_earX	right_earY	right_earZ	left_shoulderX	left_shoulderY	left_shoulderZ	right_shoulderX	right_shoulderY	right_shoulderZ	left_elbowX	left_elbowY	left_elbowZ	right_elbowX	right_elbowY	right_elbowZ	left_wristX	left_wristY	left_wristZ	right_wristX	right_wristY	right_wristZ	left_hipX	left_hipY	left_hipZ	right_hipX	right_hipY	right_hipZ	left_kneeX	left_kneeY	left_kneeZ	right_kneeX	right_kneeY	right_kneeZ	left_ankleX	left_ankleY	left_ankleZ	right_ankleX	right_ankleY	right_ankleZ	bb_x1	bb_y1	bb_x2	bb_y2
+
+
+Now, Please use lightgbm to training a model, and validate.
+
+- gaze is label
+- teacherID, gaze0, gaze1, gaze2 is useless, do not use them. 
+
+
+
+
+3. Tabular
+I have two csv file training_dir, validate_dir:
+one file contains information for training, one file contains information for validating.
+
+All csv file are same, the first row is header, there are many columns, includes:
+teacherID	gaze0	gaze1	gaze2	distance0	distance1	distance2	relaxation0	relaxation1	relaxation2	gesture0	gesture1	gesture2	imgID	posX	posY	gaze	distance	relaxation	gesture	noseX	noseY	noseZ	left_eyeX	left_eyeY	left_eyeZ	right_eyeX	right_eyeY	right_eyeZ	left_earX	left_earY	left_earZ	right_earX	right_earY	right_earZ	left_shoulderX	left_shoulderY	left_shoulderZ	right_shoulderX	right_shoulderY	right_shoulderZ	left_elbowX	left_elbowY	left_elbowZ	right_elbowX	right_elbowY	right_elbowZ	left_wristX	left_wristY	left_wristZ	right_wristX	right_wristY	right_wristZ	left_hipX	left_hipY	left_hipZ	right_hipX	right_hipY	right_hipZ	left_kneeX	left_kneeY	left_kneeZ	right_kneeX	right_kneeY	right_kneeZ	left_ankleX	left_ankleY	left_ankleZ	right_ankleX	right_ankleY	right_ankleZ	bb_x1	bb_y1	bb_x2	bb_y2
+Next, imgID save the file name of image under C:\Datasets\Talis_frames15_v2.
+
+Now please resize image to 224 x 224, then convolve, then concatenate with tabular feature.
+Please use lightgbm to training a model, and validate.
+
+- gaze is label, its classification, so convert by LabelEncoder is neccesary.
+- teacherID, gaze0, gaze1, gaze2 imgID is useless, do not use them. 
+
+
